@@ -1,0 +1,6 @@
+base_model: '/Users/mac/Desktop/Pre-trained/Llama/Llama-3.2-1B-instruct'
+evaluator_model: 'llama3.1:8b-instruct-q4_K_M'
+adapter_path: 'adapters/Llama3.1-1b-SFT'
+dataset_path: ''
+#sft, structured
+eval_type: 'sft'

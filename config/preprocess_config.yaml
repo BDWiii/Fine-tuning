@@ -1,0 +1,19 @@
+task: sft
+dataset_path: Alignment-Lab-AI/Lawyer-Instruct
+split: train
+output_dir: /Users/mac/Desktop/Projects/Scripts/fine_tuning/ready_datasets/other
+output_name: lawyer_test_dataset
+system_col: null
+system_msg: "You are a helpful assistant."
+user_col: "['instruction']"
+
+# response for SFT and constitutional
+response_col: "['output']"      
+# for DPO
+chosen_col: null
+rejected_col: null
+chosen_score_col: null
+rejected_score_col: null
+# for constitutional
+critique_col: null
+revised_response_col: null

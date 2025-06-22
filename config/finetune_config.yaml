@@ -1,0 +1,26 @@
+openai_schema: True
+# sft dpo grpo constitutional_ai
+finetuning_type: 'sft'
+is_dummy: True
+model_name: '/Users/mac/Desktop/Pre-trained/Llama/Llama-3.2-1B-instruct'
+output_dir: '/Users/mac/Desktop/Projects/Scripts/fine_tuning/adapters/Llama3.1-1b-SFT'
+dataset_path: '/Users/mac/Desktop/Projects/Scripts/fine_tuning/ready_datasets/other/lawyer_test_dataset'
+multiple_datasets: False
+multiple_datasets_path: "['']"
+test_size: 0.05
+task_type: CAUSAL_LM
+max_seq_length: 64000
+learning_rate: 2e-4
+num_train_epochs: 3
+per_device_train_batch_size: 2
+per_device_eval_batch_size: 4
+gradient_accumulation_steps: 8
+torch_dtype: torch.bfloat16
+load_in_4bit: False
+lora_rank: 8
+lora_alpha: 64
+lora_dropout: 0.0
+target_modules: "['q', 'v', 'q_proj', 'v_proj', 'k_proj', 'up_proj', 'down_proj', 'o_proj', 'gate_proj']"
+merge_adapters: False
+#for formatting to openai.
+formatting_tokenizer: "HuggingFaceH4/zephyr-7b-beta"
